@@ -2,9 +2,15 @@
 sudo pacman -Syuu
 sudo pacman -S --noconfirm yay neovim stow
 
-yay -S --noconfirm base-devel exa bat zsh-theme-powerlevel10k-git tmux xclip fzf ripgrep fd npm lazygit eslint prettier kvantum latte-dock kwin-bismuth
+yay -S --noconfirm base-devel exa bat zsh-theme-powerlevel10k-git tmux xclip fzf ripgrep fd npm lazygit eslint prettier kvantum latte-dock kwin-bismuth docker
 
 npm i -g neovim
+
+
+# Setup docker
+sudo usermod -aG docker $USER
+sudo systemctl enable docker
+sudo systemctl start docker
 
 
 # Create ssh key for github
